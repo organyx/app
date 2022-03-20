@@ -20,6 +20,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Dockerized environment
 
+#### Requirements
+
+Create ```app.env``` file for each environment
+
+Example
+
+```sh
+# docker/development/app.env
+environment=development
+```
+
 Run the dockerized server:
 
 ```bash
