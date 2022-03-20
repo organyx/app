@@ -12,4 +12,4 @@ services:
     env_file:
       - app.env
     volumes:
-      - /Users/aleksandrbeliun/Documents/projects/next/app/:/home/node/app/
+      - ../../:/home/node/app/
