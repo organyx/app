@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useEffect } from 'react'
 import JobList from '../components/jobs/JobList'
 
 const Home: NextPage = ({ jobs }: any) => {
@@ -15,34 +14,13 @@ const Home: NextPage = ({ jobs }: any) => {
 }
 
 export const getStaticProps = async () => {
+  const res = await fetch('https://boards-api.greenhouse.io/v1/boards/unity3d/jobs')
+  const data = await res.json()
+
+
   return {
     props: {
-      jobs: [
-        {
-          id: '1',
-          title: 'Software Engineer',
-          location: {
-            name: 'San Francisco, CA'
-          },
-          content: 'asd'
-        },
-        {
-          id: '2',
-          title: 'Software Engineer',
-          location: {
-            name: 'San Francisco, CA'
-          },
-          content: 'asd'
-        },
-        {
-          id: '3',
-          title: 'Software Engineer',
-          location: {
-            name: 'San Francisco, CA'
-          },
-          content: 'asd'
-        }
-      ]
+      jobs: data.jobs
     }
   }
 }
