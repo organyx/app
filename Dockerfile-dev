@@ -1,0 +1,7 @@
+FROM node:alpine
+
+EXPOSE 3000
+
+WORKDIR /home/node/app
+
+ENTRYPOINT [ "/home/node/app/docker-entrypoint.sh" ]
