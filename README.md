@@ -31,6 +31,7 @@ Example
 environment=development
 ```
 
+
 Run the dockerized server:
 
 ```bash
@@ -38,6 +39,11 @@ cd docker/${environment} && docker compose up -d
 ```
 
 <b> where ```environment = development || production```</b>
+
+<b>NOTE:</b> If Docker is complaining about permissions, give it some by running
+```sh
+chmod +x docker-entrypoint.sh
+```
 
 
 Open [http://localhost:3005](http://localhost:3005) with your browser to see the result.
